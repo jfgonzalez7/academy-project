@@ -1,0 +1,15 @@
+<ul class="list">
+  <li *ngFor="let product of products">
+    <div class="card">
+      <app-card
+        [name]="product.name"
+        [description]="product.description"
+        [imgUrl]="product.imgUrl"
+      ></app-card>
+      <footer class="card-footer">
+        <button class="card-footer-item" (click)="deleteProduct()">Delete</button>
+        <button class="card-footer-item" (click)="editQuantity(1)">Edit</button>
+      </footer>
+    </div>
+  </li>
+</ul>
