@@ -9,6 +9,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedModule } from "./shared/shared.module";
 import { ProductsModule } from './products/products.module';
+import { ClientAddComponent } from './clients/client-add/client-add.component';
+import { ClientListComponent } from './clients/client-list/client-list.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ProductsModule } from './products/products.module';
     HomeComponent,
     HeaderComponent,
     NavigationComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ClientAddComponent,
+    ClientListComponent
   ],
   imports: [
     BrowserModule,
