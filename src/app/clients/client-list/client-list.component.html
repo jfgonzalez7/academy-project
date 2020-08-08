@@ -1,1 +1,9 @@
 <p>client-list works!</p>
+<ng-container>
+    <table>
+        <tr  *ngFor="let client of  clientlist" >
+          <td>{{ client.cli_name }}</td>
+          <td>{{ client.cli_telefono }}</td>
+        </tr>
+      </table>
+</ng-container>

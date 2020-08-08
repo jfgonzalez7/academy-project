@@ -11,6 +11,7 @@ import { SharedModule } from "./shared/shared.module";
 import { ProductsModule } from './products/products.module';
 import { ClientAddComponent } from './clients/client-add/client-add.component';
 import { ClientListComponent } from './clients/client-list/client-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ClientListComponent } from './clients/client-list/client-list.component
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    ProductsModule
+    ProductsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
