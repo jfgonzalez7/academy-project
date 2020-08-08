@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Client } from './Client.model';
+import { ClientesList } from './ClientesList.model';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 
@@ -16,6 +16,6 @@ export class ClientListService {
 
   findClients() {
     const endpoint = 'https://5f2b2e646ae5cc00164234d6.mockapi.io/api/v1/clientes';
-    return this.http.get<Client[]>(endpoint);
+    return this.http.get<ClientesList[]>(endpoint);
   }
 }
