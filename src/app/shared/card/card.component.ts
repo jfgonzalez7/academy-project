@@ -8,11 +8,17 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CardComponent implements OnInit {
   @Input() name: string;
   @Input() description: string;
+  @Input() price: number;
   @Input() imgUrl: string;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  showDetails() {
+    console.log('These are the product details');
+    
   }
 
 }

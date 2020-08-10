@@ -1,7 +1,16 @@
-<div class="card">
-  <img [src]="imgUrl" alt="product image" class="card-image" />
-  <div class="body">
-    <div class="name">{{ name }}</div>
-    <div class="description">{{ description }}</div>
+<div class="card br3 dark-gray shadow-5 mv3 mh4-l w-100 w-80-m mw5">
+  <img [src]="imgUrl" alt="product image" class="card-image db w-80 br2 center" />
+  <div class="card-body pa2 ph3-ns pb3-ns">
+    <div class="card-header flex justify-between flex-wrap">
+      <div class="name f5 fw5 mb2">{{ name }}</div>
+      <div class="price f5 fw6">{{ price | currency: 'USD' : 'symbol' : '2.0-2' }}</div>
+    </div>
+    <div class="description f6 lh-copy measure mv2 mid-gray">{{ description }}</div>
+    <button class="cta-btn center pointer f6 flex items-center br3 ph2 pv2 mb2 mt3" (click)="showDetails()">
+      <i class="fas fa-shopping-basket fa-2x white" aria-hidden="true"></i> &nbsp;
+      <span class="details f4 white">
+        See details
+      </span>
+    </button>
   </div>
 </div>

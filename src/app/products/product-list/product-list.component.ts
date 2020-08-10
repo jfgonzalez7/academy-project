@@ -13,25 +13,16 @@ export class ProductListComponent {
     const newProduct: Product = {
       id: 1,
       name: 'Strawberries',
-      description: 'Fresh produced',
-      quantity: 3,
-      imgUrl: ''
+      description: 'Fresh produced directly from the farm',
+      price: 1500,
+      imgUrl: 'https://images-na.ssl-images-amazon.com/images/I/71VSEKoK5RL._SX425_.jpg'
     }
+    this.addNewProduct(newProduct);
     this.addNewProduct(newProduct);
     this.addNewProduct(newProduct);
   }
 
   addNewProduct(product: Product) {
     this.products = [...this.products, product];
-  }
-
-  editQuantity(quantity: number) {
-    console.log('Quantity is now ' + quantity);
-    
-  }
-
-  deleteProduct() {
-    console.log('Product deleted!');
-    
   }
 }

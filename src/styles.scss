@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+$blue: #6b879f;
+$orange: #ce794b;
+$white: #dfd9c6;
+$secondary: #8c8283;
+$tertiary: #ad7d67;
+
+@import 'https://unpkg.com/tachyons@4/css/tachyons.min.css';
+
+body { 
+    margin: 0; 
+    padding: 0;
+}
+
+.navbar-brand {
+    background-color: $white;
+    border-top: 3px solid $orange;
+}
+
+.cta-btn {
+    background-color: $orange;
+}
