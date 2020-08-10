@@ -3,20 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeComponent } from '../app/components/home/home.component';
+import { HeaderComponent } from '../app/components/header/header.component';
+import { NavigationComponent } from '../app/components/navigation/navigation.component';
+import { NotFoundComponent } from '../app/components/not-found/not-found.component';
 import { SharedModule } from "./shared/shared.module";
 import { ProductsModule } from './products/products.module';
-import { ClientAddComponent } from './clients/client-add/client-add.component';
-import { ClientListComponent } from './clients/client-list/client-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatTableModule } from '@angular/material/table'  
-import {MatFormFieldModule} from '@angular/material/form-field';
-
+import { ClientModule } from './clients/client.module';
 
 
 @NgModule({
@@ -25,20 +20,16 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     HomeComponent,
     HeaderComponent,
     NavigationComponent,
-    NotFoundComponent,
-    ClientAddComponent,
-    ClientListComponent
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     ProductsModule,
+    ClientModule,
     HttpClientModule,
-    BrowserAnimationsModule,
-    MatSliderModule,
-    MatTableModule,
-    MatFormFieldModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

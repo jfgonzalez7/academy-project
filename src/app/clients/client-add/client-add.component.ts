@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ClientAddService } from './client-add.service';
-import { ClientAdd } from './ClientAdd.model';
+import { ClientService } from '../client.service';
+import { Client } from '../client';
 
 @Component({
   selector: 'app-client-add',
@@ -9,13 +9,12 @@ import { ClientAdd } from './ClientAdd.model';
 })
 export class ClientAddComponent implements OnInit {
 
-  constructor(private clientAddService: ClientAddService) { }
+  constructor(private clientAddService: ClientService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 
-  saveCliente(client: ClientAdd) {
+  saveCliente(client: Client) {
     this.clientAddService.saveClient(client).subscribe(response => {
       //success message
     }, error => {
