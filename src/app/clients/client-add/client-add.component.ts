@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../client.service';
 import { Cliente } from '../cliente.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-client-add',
@@ -10,17 +11,29 @@ import { Cliente } from '../cliente.model';
 export class ClientAddComponent implements OnInit {
 
 
-  client: Cliente;
 
-  constructor(private clientAddService: ClientService) { }
+  name: string;
+  phone: string;
+  address: string;
+
+
+  constructor(private clientAddService: ClientService, private router: Router) { }
 
   ngOnInit() { }
 
 
-  saveCliente(client) {
-    console.log(client);
-    this.clientAddService.saveClient(client).subscribe(response => {
+  saveCliente() {
+
+    const newClient: Cliente = {
+      id_client: null,
+      cli_name: this.name,
+      cli_telefono: this.phone,
+      cli_direccion: this.address
+    }
+    console.log(newClient);
+    this.clientAddService.saveClient(newClient).subscribe(response => {
       console.log(response);
+      this.router.navigate(['clients']);
     }, error => {
       // error message
     }
