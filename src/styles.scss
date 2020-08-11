@@ -9,7 +9,6 @@ $tertiary: #ad7d67;
 body { 
     margin: 0; 
     padding: 0;
-    height: 100%;
     font-family: 'Helvetica Neue', sans-serif;
 }
 
@@ -24,4 +23,8 @@ table {
 
 .cta-btn {
     background-color: $orange;
+}
+
+footer {
+    background-color: $tertiary
 }

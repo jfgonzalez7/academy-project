@@ -12,6 +12,7 @@ import { ProductsModule } from './products/products.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClientModule } from './clients/client.module';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ClientModule } from './clients/client.module';
     HomeComponent,
     HeaderComponent,
     NavigationComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
