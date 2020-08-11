@@ -14,7 +14,6 @@ export class ProductListComponent implements OnInit{
     let errorMessage: string;
     this.productService.getProducts().subscribe(
       (result: Product[]) => {
-      console.log(result);
       this.products = result;
     }, error => (errorMessage = error));
   }
@@ -22,7 +21,4 @@ export class ProductListComponent implements OnInit{
   ngOnInit() {
   }
 
-  addNewProduct(product: Product) {
-    this.products = [...this.products, product];
-  }
 }

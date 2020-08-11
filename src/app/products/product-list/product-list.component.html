@@ -1,10 +1,10 @@
 <div class="container">
   <app-list-header title="Check out our list of Products"></app-list-header>
-  <ul class="list flex flex-wrap">
+  <ul class="list pl1 flex flex-wrap">
     <li *ngFor="let product of products">
       <div class="card">
         <app-card
-          [id]="product.id_prod"
+          [id]="product.id_producto"
           [name]="product.name"
           [description]="product.description"
           [price]="product.price"
