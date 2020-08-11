@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../client.service';
-import { Client } from '../client';
+import { Cliente } from '../cliente.model';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { Client } from '../client';
 })
 export class ClientListComponent implements OnInit {
 
-  clientlist: Array<Client>;
+  clientlist: Array<Cliente>;
 
   displayedColumns: string[] = ['Id', 'Nombre', 'Telefono', 'Direccion'];
 
@@ -19,7 +19,8 @@ export class ClientListComponent implements OnInit {
   ngOnInit() {
     this.clientListService.findClients().subscribe(
       response => {
-        
+        console.log(response);
+        this.clientlist = response;
       }, error => { 
 
       });
