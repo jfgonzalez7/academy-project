@@ -5,12 +5,14 @@ import { NotFoundComponent } from '../app/components/not-found/not-found.compone
 import { ProductListComponent } from './products/product-list/product-list.component';
 import { ClientListComponent } from './clients/client-list/client-list.component';
 import { ClientAddComponent } from './clients/client-add/client-add.component';
+import { ProductCartComponent } from "./products/product-cart/product-cart.component";
 
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductListComponent },
+  { path: 'cart/:id', component: ProductCartComponent},
   { path: 'clients', component: ClientListComponent },
   { path: 'clients/add', component: ClientAddComponent },
   { path: '**', component: NotFoundComponent },

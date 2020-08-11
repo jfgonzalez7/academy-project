@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { SharedModule } from '../shared/shared.module';
+import { ProductCartComponent } from './product-cart/product-cart.component';
 
 @NgModule({
-  declarations: [ProductListComponent, ProductDetailComponent],
+  declarations: [ProductListComponent, ProductCartComponent],
   imports: [CommonModule, SharedModule],
-  exports: [ProductListComponent, ProductDetailComponent]
+  exports: [ProductListComponent, ProductCartComponent]
 })
 export class ProductsModule { }
