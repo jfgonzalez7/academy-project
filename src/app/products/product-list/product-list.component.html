@@ -1,13 +1,16 @@
-<!-- <app-header-list [title]="Products"></app-header-list> -->
-<ul class="list flex">
-  <li *ngFor="let product of products">
-    <div class="card">
-      <app-card
-        [name]="product.name"
-        [description]="product.description"
-        [price]="product.price"
-        [imgUrl]="product.imgUrl"
-      ></app-card>
-    </div>
-  </li>
-</ul>
+<div class="container">
+  <app-list-header title="Check out our list of Products"></app-list-header>
+  <ul class="list flex flex-wrap">
+    <li *ngFor="let product of products">
+      <div class="card">
+        <app-card
+          [id]="product.id_prod"
+          [name]="product.name"
+          [description]="product.description"
+          [price]="product.price"
+          [imgUrl]="product.imgUrl"
+        ></app-card>
+      </div>
+    </li>
+  </ul>
+</div>
