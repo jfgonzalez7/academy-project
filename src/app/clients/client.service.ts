@@ -19,7 +19,6 @@ export class ClientService {
 
   saveClient(client: Cliente) {
     const endpoint = 'https://5f2b2e646ae5cc00164234d6.mockapi.io/api/v1/clientes';
-    console.log(client);
     return this.http.post(endpoint, client).pipe(map(res => res));
   }
 }

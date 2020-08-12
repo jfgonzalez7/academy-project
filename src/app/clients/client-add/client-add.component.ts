@@ -22,7 +22,7 @@ export class ClientAddComponent implements OnInit {
   ngOnInit() { }
 
 
-  saveCliente() {
+  onSubmit() {
 
     const newClient: Cliente = {
       id_client: null,
