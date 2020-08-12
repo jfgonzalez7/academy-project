@@ -1,0 +1,8 @@
+<div  *ngIf="messagesService.messages.length" class="messageAlert" [@slideDownIn]>
+    <div class="alert {{messagesService.type}}" role="alert">
+        <button *ngIf="showClear" type="button" class="btn-circle close btn-close-message" (click)="clear()" arial-label="close" >
+            <i class="ti-close"></i>
+        </button>
+        <p *ngFor="let message of messagesService.messages;let i=index" attr.id="message_{{i}}">{{message}}</p>
+    </div>
+</div>
