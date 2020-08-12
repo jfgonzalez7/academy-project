@@ -7,13 +7,14 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatTableModule } from '@angular/material/table'
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material';
+import { MatInputModule, MatTooltipModule } from '@angular/material';
+
 
 
 @NgModule({
   declarations: [ClientAddComponent, ClientListComponent],
   imports: [CommonModule, SharedModule, MatSliderModule, MatTableModule, 
-    MatFormFieldModule, FormsModule, MatInputModule],
+    MatFormFieldModule, FormsModule, MatInputModule,MatTooltipModule],
   exports: [ClientAddComponent, ClientListComponent]
 })
 export class ClientModule { }
