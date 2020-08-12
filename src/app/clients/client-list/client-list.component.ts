@@ -12,13 +12,13 @@ export class ClientListComponent implements OnInit {
 
   clientlist: Array<Cliente>;
 
-  displayedColumns: string[] = ['Id', 'Nombre', 'Telefono', 'Direccion'];
+  displayedColumns: string[] = ['id', 'nombre', 'telefono', 'direccion'];
 
   constructor(private clientListService: ClientService) { }
 
   ngOnInit() {
     this.clientListService.findClients().subscribe(
-      response => {
+      (response: any) => {
         console.log(response);
         this.clientlist = response;
       }, error => { 

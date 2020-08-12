@@ -13,7 +13,21 @@ body {
 }
 
 table {
-    width: 100%;
+    width: 80vw;
+}
+
+.mat-column-nombre, 
+.mat-column-direccion, 
+.mat-column-telefono {
+    max-width: 70px;
+}
+
+tr.mat-footer-row, tr.mat-row {
+    height: 60px !important;
+}
+
+main {
+    min-height: calc(100vh - 67px - 89px);
 }
 
 .navbar-brand {
