@@ -1,13 +1,24 @@
-<div class="container">
+<div class="cart">
     <app-list-header title="Your cart"></app-list-header>
-    <div class="product flex shadow-2 br3">
-        <div class="product-image">
-            <img [src]="productItem.imgUrl" alt="Product Image" class="img-details w-100 mw5" />
-        </div>
-        <div class="product-info pl0 mt3 pt3 pl3-ns lh-copy">
-            <h2 class="lh-title f4 fw5 mv0"> {{productItem.name}} </h2>
-            <span class="lh-copy fw6">{{productItem.price}}</span>
-            <p class="lh-copy">{{productItem.description}}</p>
+    <div class="flex justify-center items-center" *ngIf="productCart.length > 0 else emptycart">
+        <div class="product flex flex-column shadow-2 br3 ma3" *ngFor="let product of productCart">
+            <div class="product-image">
+                <img [src]="product.imgUrl" alt="Product Image" class="img-details pv2 w-100 mw5" />
+            </div>
+            <div class="product-info pl0 mt3 pt3 pr3-ns lh-copy">
+                <h2 class="lh-title f4 fw5 mv0"> {{product.name}} </h2>
+                <span class="lh-copy fw6">{{product.price}}</span>
+                <p class="lh-copy">{{product.description}}</p>
+            </div>
+            <button class="cta-btn center pointer f6 flex items-center w-80 br3 pa2 mv3" (click)="removeProduct(product.id_prod)">
+                <i class="fas fa-trash fa-2x white" aria-hidden="true"></i> &nbsp;
+                <span class="details f4 white">
+                    Remove product
+                </span>
+            </button>
         </div>
     </div>
+    <ng-template #emptycart>
+        <h2 class="f4 pv3 ph3">You have not added any products yet!</h2>
+    </ng-template>
 </div>

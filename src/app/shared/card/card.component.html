@@ -6,7 +6,7 @@
       <div class="price f5 fw6">{{ price | currency: 'USD' : 'symbol' : '2.0-2' }}</div>
     </div>
     <div class="description f6 lh-copy measure mv2 mid-gray">{{ description }}</div>
-    <button class="cta-btn center pointer f6 flex items-center br3 ph2 pv2 mb2 mt3" [routerLink]="['/cart', id]">
+    <button class="cta-btn center pointer f6 flex items-center br3 ph2 pv2 mb2 mt3" (click)="addProduct(id)">
       <i class="fas fa-shopping-basket fa-2x white" aria-hidden="true"></i> &nbsp;
       <span class="details f4 white">
         Add to cart

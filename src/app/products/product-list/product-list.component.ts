@@ -19,9 +19,11 @@ export class ProductListComponent implements OnInit {
         this.products = result;
       }, error => {
         this.errorMessage = error
-        console.log(this.errorMessage);
       }
     );
   }
 
+  addToCart(productId: number) {
+    this.productService.addNewProduct(productId);
+  }
 }

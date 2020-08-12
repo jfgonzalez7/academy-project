@@ -1,4 +1,4 @@
-<div class="container">
+<div class="productlist">
   <app-list-header title="Check out our list of Products"></app-list-header>
   <ul class="list pl1 pl3-ns flex flex-wrap">
     <li *ngFor="let product of products">
@@ -8,6 +8,7 @@
           [description]="product.description"
           [price]="product.price"
           [imgUrl]="product.imgUrl"
+          (selected)="addToCart($event)"
         ></app-card>
     </li>
   </ul>
