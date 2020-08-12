@@ -1,4 +1,13 @@
 <div class="container">
     <app-list-header title="Your cart"></app-list-header>
-
+    <div class="product flex shadow-2 br3">
+        <div class="product-image">
+            <img [src]="productItem.imgUrl" alt="Product Image" class="img-details w-100 mw5" />
+        </div>
+        <div class="product-info pl0 mt3 pt3 pl3-ns lh-copy">
+            <h2 class="lh-title f4 fw5 mv0"> {{productItem.name}} </h2>
+            <span class="lh-copy fw6">{{productItem.price}}</span>
+            <p class="lh-copy">{{productItem.description}}</p>
+        </div>
+    </div>
 </div>

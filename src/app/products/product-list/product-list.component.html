@@ -2,7 +2,6 @@
   <app-list-header title="Check out our list of Products"></app-list-header>
   <ul class="list pl1 pl3-ns flex flex-wrap">
     <li *ngFor="let product of products">
-      <div class="card">
         <app-card
           [id]="product.id_producto"
           [name]="product.name"
@@ -10,7 +9,6 @@
           [price]="product.price"
           [imgUrl]="product.imgUrl"
         ></app-card>
-      </div>
     </li>
   </ul>
 </div>
