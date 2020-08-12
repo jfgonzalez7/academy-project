@@ -18,8 +18,7 @@ export class ClientListComponent implements OnInit {
 
   ngOnInit() {
     this.clientListService.findClients().subscribe(
-      (response: any) => {
-        console.log(response);
+      (response) => {
         this.clientlist = response;
       }, error => { 
 

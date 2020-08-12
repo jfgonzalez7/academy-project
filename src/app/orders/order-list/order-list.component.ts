@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {OrderService} from '../order.service'
+import { order } from '../order.model';
 
 
 @Component({
@@ -9,9 +10,20 @@ import {OrderService} from '../order.service'
 })
 export class OrderListComponent implements OnInit {
 
+  displayedColumns: string[] = ['id', 'nombre_producto', 'precio', 'cantidad'];
+  orderList: Array<order>;
+
   constructor(private orderService:OrderService) { }
 
+  @Input() idClient: number;
+
   ngOnInit() {
+
+    this.orderService.findOrdersByIdClient(this.idClient).subscribe(
+      (response) => {
+        this.orderList = response;
+      }, error => { 
+      });
   }
 
 }

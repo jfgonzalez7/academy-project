@@ -1,1 +1,28 @@
-<p>order-list works!</p>
+<app-list-header title="List of orders"></app-list-header>
+<div class="table-container br3 shadow-1 ph0 mt3 mh3-ns">
+    <table mat-table [dataSource]="orderList" class="mat-elevation-z8">
+        <ng-container matColumnDef="id">
+            <th class="dark-gray" mat-header-cell *matHeaderCellDef> Id </th>
+            <td class="mid-gray" mat-cell *matCellDef="let element"> {{element.id_cliente}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nombre_producto">
+            <th class="dark-gray" mat-header-cell *matHeaderCellDef> Nombre </th>
+            <td class="mid-gray" mat-cell *matCellDef="let element"> {{element.cli_name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="precio">
+            <th class="dark-gray" mat-header-cell *matHeaderCellDef> Telefono </th>
+            <td class="mid-gray" mat-cell *matCellDef="let element"> {{element.cli_telefono}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cantidad">
+            <th class="dark-gray" mat-header-cell *matHeaderCellDef> Direccion </th>
+            <td class="mid-gray" mat-cell *matCellDef="let element"> {{element.cli_direccion}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+    
