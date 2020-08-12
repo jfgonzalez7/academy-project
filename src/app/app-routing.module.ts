@@ -6,6 +6,7 @@ import { ProductListComponent } from './products/product-list/product-list.compo
 import { ClientListComponent } from './clients/client-list/client-list.component';
 import { ClientAddComponent } from './clients/client-add/client-add.component';
 import { ProductCartComponent } from "./products/product-cart/product-cart.component";
+import { OrderListComponent } from './orders/order-list/order-list.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'cart/:id', component: ProductCartComponent},
   { path: 'clients', component: ClientListComponent },
   { path: 'clients/add', component: ClientAddComponent },
+  //{ path: 'orders', component: OrderListComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

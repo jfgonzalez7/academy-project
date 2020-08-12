@@ -14,7 +14,7 @@ export class OrderService {
 
   findOrdersByIdClient(id_client: number){
     const  endpoint = '';
-    this.http.get<order[]>(endpoint);
+    return this.http.get<order[]>(endpoint);
   }
 
 }
