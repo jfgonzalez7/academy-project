@@ -4,8 +4,7 @@ import { Product } from '../product.model';
 
 @Component({
   selector: 'app-product-cart',
-  templateUrl: './product-cart.component.html',
-  styleUrls: ['./product-cart.component.scss']
+  templateUrl: './product-cart.component.html'
 })
 export class ProductCartComponent implements OnInit {
   productCart: Product[] = [];
@@ -17,6 +16,7 @@ export class ProductCartComponent implements OnInit {
   }
 
   removeProduct(productId: number) {
-    console.log(productId);
+    this.productService.removeProduct(productId);
+    this.productCart = this.productService.getCartItems();
   }
 }

@@ -1,18 +1,18 @@
 <div class="cart">
     <app-list-header title="Your cart"></app-list-header>
-    <div class="flex justify-center items-center" *ngIf="productCart.length > 0 else emptycart">
+    <div class="flex flex-wrap justify-center items-center ml4-m ml5-l" *ngIf="productCart.length > 0 else emptycart">
         <div class="product flex flex-column shadow-2 br3 ma3" *ngFor="let product of productCart">
             <div class="product-image">
                 <img [src]="product.imgUrl" alt="Product Image" class="img-details pv2 w-100 mw5" />
             </div>
-            <div class="product-info pl0 mt3 pt3 pr3-ns lh-copy">
+            <div class="product-info pl0 mt3 ph3 pr3-ns lh-copy">
                 <h2 class="lh-title f4 fw5 mv0"> {{product.name}} </h2>
                 <span class="lh-copy fw6">{{product.price}}</span>
                 <p class="lh-copy">{{product.description}}</p>
             </div>
-            <button class="cta-btn center pointer f6 flex items-center w-80 br3 pa2 mv3" (click)="removeProduct(product.id_prod)">
+            <button class="cta-btn center pointer f6 flex items-center w-80 br3 pa2 mv3" (click)="removeProduct(product.id_producto)">
                 <i class="fas fa-trash fa-2x white" aria-hidden="true"></i> &nbsp;
-                <span class="details f4 white">
+                <span class="details w-100 f5 f4-ns white">
                     Remove product
                 </span>
             </button>
