@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ClientService } from '../client.service';
 import { Cliente } from '../cliente.model';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,9 @@ export class ClientListComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'nombre', 'telefono', 'direccion', 'view'];
 
-  constructor(private clientListService: ClientService) { }
+  @Output() id_client = new EventEmitter<number>();
+
+  constructor(private clientListService: ClientService,private router: Router) { }
 
   ngOnInit() {
     this.clientListService.findClients().subscribe(
@@ -23,6 +26,12 @@ export class ClientListComponent implements OnInit {
         // error message
       });
 
+  }
+
+
+  viewOrder(id_client: number){
+    this.id_client.emit(id_client);
+    this.router.navigate(['orders']);
   }
 
 }

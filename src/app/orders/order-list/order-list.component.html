@@ -7,18 +7,18 @@
         </ng-container>
 
         <ng-container matColumnDef="nombre_producto">
-            <th class="dark-gray" mat-header-cell *matHeaderCellDef> Nombre </th>
+            <th class="dark-gray" mat-header-cell *matHeaderCellDef> Nombre producto </th>
             <td class="mid-gray" mat-cell *matCellDef="let element"> {{element.cli_name}} </td>
         </ng-container>
 
         <ng-container matColumnDef="precio">
-            <th class="dark-gray" mat-header-cell *matHeaderCellDef> Telefono </th>
+            <th class="dark-gray" mat-header-cell *matHeaderCellDef> Precio </th>
             <td class="mid-gray" mat-cell *matCellDef="let element"> {{element.cli_telefono}} </td>
         </ng-container>
 
         <ng-container matColumnDef="cantidad">
-            <th class="dark-gray" mat-header-cell *matHeaderCellDef> Direccion </th>
-            <td class="mid-gray" mat-cell *matCellDef="let element"> {{element.cli_direccion}} </td>
+            <th class="dark-gray" mat-header-cell *matHeaderCellDef> Cantidad </th>
+            <td class="mid-gray" mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

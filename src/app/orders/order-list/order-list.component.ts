@@ -7,6 +7,8 @@ import { order } from '../order.model';
   templateUrl: './order-list.component.html'
 })
 export class OrderListComponent implements OnInit {
+
+  
   displayedColumns: string[] = ['id', 'nombre_producto', 'precio', 'cantidad'];
   orderList: Array<order>;
 
@@ -19,6 +21,12 @@ export class OrderListComponent implements OnInit {
     this.orderService.findOrdersByIdClient(this.idClient).subscribe(
       (response) => {
         this.orderList = response;
+
+        this.orderList.forEach(input =>{
+           console.log(this.orderService.findProductByIdProdcuto(input.idProd).subscribe());
+        });
+
+
       }, error => {
         // error message
       }

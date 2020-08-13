@@ -4,5 +4,6 @@ export class order {
     clientId: number;
     idProd: number;
     cantidad: number;
+    precio : number;
 
 }
