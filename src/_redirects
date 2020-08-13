@@ -1,0 +1,2 @@
+# Rewrite all request to an unexisting resource to the index page.
+/* /index.html 200
