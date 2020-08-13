@@ -5,8 +5,7 @@ import { Cliente } from '../cliente.model';
 
 @Component({
   selector: 'app-client-list',
-  templateUrl: './client-list.component.html',
-  styleUrls: ['./client-list.component.scss']
+  templateUrl: './client-list.component.html'
 })
 export class ClientListComponent implements OnInit {
 
