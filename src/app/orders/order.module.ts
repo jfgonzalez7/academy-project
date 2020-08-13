@@ -13,8 +13,7 @@ import { FormsModule } from '@angular/forms';
     SharedModule,
     MatTableModule,
     MatSliderModule,
-    FormsModule,
-    OrderListComponent
+    FormsModule
   ],
   exports: [OrderListComponent]
 })
