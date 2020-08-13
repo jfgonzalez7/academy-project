@@ -13,7 +13,7 @@ export class OrderService {
 
 
   findOrdersByIdClient(id_client: number){
-    const  endpoint = '';
+    const  endpoint = 'https://5f2b2e646ae5cc00164234d6.mockapi.io/api/v1//clientes/'+id_client+'/pedidos';
     return this.http.get<order[]>(endpoint);
   }
 

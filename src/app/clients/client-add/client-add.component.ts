@@ -17,7 +17,7 @@ export class ClientAddComponent implements OnInit {
   name: string;
   phone: string;
   address: string;
-  constructor(private clientAddService: ClientService, private router: Router,private message:MessagesService) { }
+  constructor(private clientAddService: ClientService, private router: Router, private message: MessagesService) { }
 
   ngOnInit() { }
 
@@ -31,12 +31,12 @@ export class ClientAddComponent implements OnInit {
       cli_direccion: this.address
     }
     this.clientAddService.saveClient(newClient).subscribe(response => {
-      this.message.create("Cliente exitoso",'alert-success',true);
-      setTimeout(() =>{
+      this.message.create("Cliente exitoso", 'alert-success', true);
+      setTimeout(() => {
         this.router.navigate(['clients']);
-      },4000
+      }, 4000
       );
-      
+
     }, error => {
       // error message
     }
