@@ -7,8 +7,7 @@ import { MessagesService } from 'src/app/shared/messages/messages.service';
 
 @Component({
   selector: 'app-client-add',
-  templateUrl: './client-add.component.html',
-  styleUrls: ['./client-add.component.scss']
+  templateUrl: './client-add.component.html'
 })
 export class ClientAddComponent implements OnInit {
 

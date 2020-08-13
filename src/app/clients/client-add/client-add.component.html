@@ -1,23 +1,23 @@
-<app-list-header title="Create clients"></app-list-header>
-<div class="container">
+<app-list-header title="Create a new client"></app-list-header>
+<div class="br3 flex shadow-1 ph0 mt4 ml3 ml5-ns">
   <app-messages></app-messages>
-  <form (submit)="onSubmit()">
-    <div class="form-group">
-      <div class="form-group">
-        <input [(ngModel)]="name" class="form-control" name="name" id="idName" placeholder="Enter name" />
+  <form class="flex flex-column items-center mt2 w5" (submit)="onSubmit()">
+      <div class="form-group ph3 mv3">
+        <label class="db fw6 lh-copy mb2 f6" for="idName">Enter name</label>
+        <input [(ngModel)]="name" class="pa2 ba b--black-50 br3" name="name" id="idName" type="text"/>
       </div>
 
-      <div class="form-group">
-        <input [(ngModel)]="phone" class="form-control" id="idPhone" name="phone" placeholder="Enter phone number" />
+      <div class="form-group ph3 mv3">
+        <label class="db fw6 lh-copy mb2  f6" for="idPhone">Enter phone number</label>
+        <input [(ngModel)]="phone" class="pa2 ba b--black-50 br3" id="idPhone" name="phone" type="phone"/>
       </div>
 
-      <div class="form-group">
-        <input [(ngModel)]="address" class="form-control" id="idAddress" name="address"
-          placeholder="Enter address" />
+      <div class="form-group ph3 mv3">
+        <label class="db fw6 lh-copy mb2 f6" for="idAddress">Enter address</label>
+        <input [(ngModel)]="address" class="pa2 ba b--black-50 br3 w-100" id="idAddress" name="address" type="text"/>
       </div>
-    </div>
     <br>
     <br>
-    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" class="cta-btn white f6 w-50 br3 pa2 ma3">Save</button>
   </form>
 </div>

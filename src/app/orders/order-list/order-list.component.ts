@@ -5,8 +5,7 @@ import { order } from '../order.model';
 
 @Component({
   selector: 'app-order-list',
-  templateUrl: './order-list.component.html',
-  styleUrls: ['./order-list.component.scss']
+  templateUrl: './order-list.component.html'
 })
 export class OrderListComponent implements OnInit {
 
