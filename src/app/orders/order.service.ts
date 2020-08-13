@@ -18,7 +18,7 @@ export class OrderService {
 
 
   findProductByIdProdcuto(idProduct:number){
-    const endpoint ='https://5f2b2e646ae5cc00164234d6.mockapi.io/api/v1/:/productos/'+1;
+    const endpoint ='https://5f2b2e646ae5cc00164234d6.mockapi.io/api/v1/productos/'+1;
     return this.http.get<Product>(endpoint);
   }
 
