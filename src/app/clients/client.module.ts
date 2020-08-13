@@ -9,12 +9,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule, MatTooltipModule } from '@angular/material';
 
-
-
 @NgModule({
   declarations: [ClientAddComponent, ClientListComponent],
-  imports: [CommonModule, SharedModule, MatSliderModule, MatTableModule, 
-    MatFormFieldModule, FormsModule, MatInputModule,MatTooltipModule],
+  imports: [CommonModule, SharedModule, MatSliderModule, MatTableModule,
+    MatFormFieldModule, FormsModule, MatInputModule, MatTooltipModule],
   exports: [ClientAddComponent, ClientListComponent]
 })
 export class ClientModule { }

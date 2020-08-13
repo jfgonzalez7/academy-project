@@ -9,7 +9,7 @@ import { Cliente } from './cliente.model';
 export class ClientService {
 
   //private httHeaders = new HttpHeaders({ 'Content-type': 'application/json' });
-  
+
   constructor(private http: HttpClient) { }
 
   findClients() {

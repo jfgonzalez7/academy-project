@@ -2,20 +2,20 @@
 <div class="br3 flex shadow-1 ph0 mt4 ml3 ml5-ns">
   <app-messages></app-messages>
   <form class="flex flex-column items-center mt2 w5" (submit)="onSubmit()">
-      <div class="form-group ph3 mv3">
-        <label class="db fw6 lh-copy mb2 f6" for="idName">Enter name</label>
-        <input [(ngModel)]="name" class="pa2 ba b--black-50 br3" name="name" id="idName" type="text"/>
-      </div>
+    <div class="form-group ph3 mv3">
+      <label class="db fw6 lh-copy mb2 f6" for="idName">Enter name</label>
+      <input [(ngModel)]="name" class="pa2 ba b--black-50 br3" name="name" id="idName" type="text" />
+    </div>
 
-      <div class="form-group ph3 mv3">
-        <label class="db fw6 lh-copy mb2  f6" for="idPhone">Enter phone number</label>
-        <input [(ngModel)]="phone" class="pa2 ba b--black-50 br3" id="idPhone" name="phone" type="phone"/>
-      </div>
+    <div class="form-group ph3 mv3">
+      <label class="db fw6 lh-copy mb2  f6" for="idPhone">Enter phone number</label>
+      <input [(ngModel)]="phone" class="pa2 ba b--black-50 br3" id="idPhone" name="phone" type="phone" />
+    </div>
 
-      <div class="form-group ph3 mv3">
-        <label class="db fw6 lh-copy mb2 f6" for="idAddress">Enter address</label>
-        <input [(ngModel)]="address" class="pa2 ba b--black-50 br3 w-100" id="idAddress" name="address" type="text"/>
-      </div>
+    <div class="form-group ph3 mv3">
+      <label class="db fw6 lh-copy mb2 f6" for="idAddress">Enter address</label>
+      <input [(ngModel)]="address" class="pa2 ba b--black-50 br3 w-100" id="idAddress" name="address" type="text" />
+    </div>
     <br>
     <br>
     <button type="submit" class="cta-btn white f6 w-50 br3 pa2 ma3">Save</button>

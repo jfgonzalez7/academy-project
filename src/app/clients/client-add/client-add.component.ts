@@ -4,15 +4,11 @@ import { Cliente } from '../cliente.model';
 import { Router } from '@angular/router';
 import { MessagesService } from 'src/app/shared/messages/messages.service';
 
-
 @Component({
   selector: 'app-client-add',
   templateUrl: './client-add.component.html'
 })
 export class ClientAddComponent implements OnInit {
-
-
-
   name: string;
   phone: string;
   address: string;
@@ -20,9 +16,7 @@ export class ClientAddComponent implements OnInit {
 
   ngOnInit() { }
 
-
   onSubmit() {
-
     const newClient: Cliente = {
       id_client: null,
       cli_name: this.name,
@@ -33,9 +27,8 @@ export class ClientAddComponent implements OnInit {
       this.message.create("Cliente exitoso", 'alert-success', true);
       setTimeout(() => {
         this.router.navigate(['clients']);
-      }, 4000
+        }, 4000
       );
-
     }, error => {
       // error message
     }

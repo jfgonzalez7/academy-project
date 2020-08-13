@@ -11,7 +11,7 @@ export class ClientListComponent implements OnInit {
 
   clientlist: Array<Cliente>;
 
-  displayedColumns: string[] = ['id', 'nombre', 'telefono', 'direccion','view'];
+  displayedColumns: string[] = ['id', 'nombre', 'telefono', 'direccion', 'view'];
 
   constructor(private clientListService: ClientService) { }
 
@@ -19,8 +19,8 @@ export class ClientListComponent implements OnInit {
     this.clientListService.findClients().subscribe(
       (response) => {
         this.clientlist = response;
-      }, error => { 
-
+      }, error => {
+        // error message
       });
 
   }
